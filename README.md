@@ -2,18 +2,18 @@
 
 ## Merhaba 👋
 
-Bugün ufak bir döküman olarak Obje Yönelimli Programlama'nın temel konularından biri olan Method'ların ne olduğunu ve nasıl kullanacağımızı tanıtıyorum.
+Bugün ufak bir döküman olarak Nesne Yönelimli Programlama'nın temel konularından biri olan Method'ların ne olduğunu ve nasıl kullanacağımızı anlatıyorum.
 
 ## Method Nedir?
 
-C#’ta açtığımız **Classlar** yani **sınıflar** içerisinde yazılan kod blokları gruplandırmamızı sağlayan yapılardır. 
-Classlar projeyi, classlar sınıf içerisinde yazılan kod bloklarını bölümlendirir.
+C#’ta açtığımız **Classlar/Sınıflar** içerisinde yazılan kod blokları gruplandırmamızı sağlayan yapılardır. 
+Methodlar sınıfların **eylemlerini/davranışlarını** yönetmemizi sağlayan yapılardır.
 
 ### Avantajları
 
-Methodlar devamlı aynı kod bloklarını tekrar etmemizi engeller ve programlarımıza esneklik kazandırır.
+Methodlar aynı kod bloklarını tekrar tekrar yazmamızı engeller ve programlarımıza esneklik kazandırır.
 Böylece kod karmaşasından kurtulurken aynı anda programımızın daha **stabil ve hızlı** çalışmasını sağlar.
-Ariyetten projemizde hata çıktığında hatayı bulup düzeltmemizi kolaylaştırır.
+Ayrıyetten projelerimizde hata kontrolü basit bir şekilde yapılır.
 
 ## Method Oluşturma
 
@@ -23,10 +23,13 @@ Hemen kısaca bu gereken şeylerin ne olduğunun tanımını yapayım.
 ### Erişim Seviyeleri
 
 #### Public
-Public seviyesindeki methoda class içerisinden veya dışarısından fark etmeksizin erişme ve veri almak mümkündür
+Public seviyesindeki methoda proje dışından ve proje içerisindeki dosyalardan erişilebilir.
+
+#### Internal
+Internal seviyesindeki methoda sadece proje içerisindeki dosyalardan erişilebilir.
 
 #### Private
-Public seviyesinin tam tersine class dışındaki **hiçbir şey** bu methoda ulaşamaz.
+Public seviyesinin tam tersine tanımlanan class dışındaki **hiçbir şey** bu methoda ulaşamaz.
 
 #### Protected
 Public ile Private seviyelerinin arasındadır, clas içerisinde protected olarak işaretlenen eleman sadece o class içinden veya o classtan kalıtım alan sınıflar
@@ -36,16 +39,15 @@ içerisinden erişilebilir olmaktadır. O classın instance'ı için private, o 
 Geriye parametre döndürmeyecek olan methodlar Void olarak tanımlanır.
 Void kullanıldığı zaman return kullanılamaz ve eğer giriş parametresi yoksa parantez içi boş bırakılır.
 
-
-### Niteliyiciler
-
-Opsiyonel bir seçenektir yani kullanmak zorunda değilsiniz. İleri seviye programlama olan OOP'de **static, abstract, virtual, sealed** kelimelerinden birini temsil eder.
-Method içerisinde genelde **static** kullanılır.
-
 ### Dönecek Veri Tipleri
 
 Methodun çalışması sonucu gönderilecek veri tipini belirler.
 Bunlar int,string gibi önceden tanımladığımız veri tipleri veya kendi yazdığımız bir veri tipide olabilir. 
+
+### Niteliyiciler
+
+Opsiyonel bir seçenektir yani kullanmak zorunda değilsiniz. İleri seviye programlama olan OOP'de **static, abstract, virtual** kelimelerinden birini temsil eder.
+Method içerisinde genelde **static** kullanılır.
 
 ### Parametreler
 
@@ -70,15 +72,15 @@ string Toplama(){}
 int Toplama(int sayi) {}
 ```
 
-### Method Adı
+### Method Imzası
 
-Methodu çağırırken kullanacağımız addır.
+Methodu çağırırken kullanacağımız addır. Mümkün olduğunca method'u anımsatacak isimler verilir.
 
 ## Method Yazmak Ve Kullanmak
 
 ### Parametreli Method
 
-Konsol projesi açtım ve Program.cs'te kullanacağım bir Methodlar.cs adında class oluşturdum.
+Konsol projesi açıyoruz ve Program.cs'te anlatımımı yapacağım.proje içerisinde Methodlar.cs adında class oluşturdum.
 Methodlar.cs 'e girince
 
 ```C#
@@ -90,7 +92,7 @@ public int Toplama  (int sayi1, int sayi2)
 ```
 
 Toplama adında bir method yaptım,  **sayi1** ve **sayi2** olarak  2 tane **int parametre** alacak.
-Sonra sonuc adında bir değişken oluşturdum bu değişken  sayi1 ve sayi2 'nin toplamını return Sonuc; kodu sayesinde verecek
+Sonra sonuc adında bir değişken oluşturdum bu değişken  sayi1 ve sayi2 'nin toplamını **return Sonuc;** kodu sayesinde verecek.
 Şimdi Program.cs'e geldim ve
 > Static Void Main arasına
 
@@ -129,6 +131,4 @@ Bunu direk **Program.cs**'e yazdım.
 
 
 ```
-
-
->Projemi beğendiyseniz yukarıdan :star: butonuna tıklayıp bana destek olabilirsiniz.
+NOT : Dökümanları kendimi geliştirmek için hazırlıyorum. Kesinlikle eğitim amaçlı değildir.
