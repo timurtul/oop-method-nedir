@@ -97,7 +97,7 @@ Sonra sonuc adında bir değişken oluşturdum bu değişken  sayi1 ve sayi2 'ni
 > Static Void Main arasına
 
 ```C#
- Console.WriteLine("1. Sayıyı Giriniz");
+            Console.WriteLine("1. Sayıyı Giriniz");
             int sayi1 = int.Parse(Console.ReadLine());
 
             Console.WriteLine("2. Sayıyı Giriniz");
