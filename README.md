@@ -6,7 +6,7 @@ Bugün ufak bir döküman olarak Nesne Yönelimli Programlama'nın temel konular
 
 ## Method Nedir?
 
-C#’ta açtığımız **Classlar/Sınıflar** içerisinde yazılan kod blokları gruplandırmamızı sağlayan yapılardır. 
+C#’ta açtığımız **Classlar/Sınıflar** içerisinde yazılan kod bloklarını gruplandırmamızı sağlayan yapılardır. 
 Methodlar sınıfların **eylemlerini/davranışlarını** yönetmemizi sağlayan yapılardır.
 
 ### Avantajları
