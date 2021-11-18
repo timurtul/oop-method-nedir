@@ -6,13 +6,13 @@ Bugün ufak bir döküman olarak Obje Yönelimli Programlama'nın temel konular�
 
 ## Method Nedir?
 
-C#’ta açtığımız Classlar yani sınıflar içerisinde yazılan kod blokları gruplandırmamızı sağlayan yapılardır. 
+C#’ta açtığımız **Classlar** yani **sınıflar** içerisinde yazılan kod blokları gruplandırmamızı sağlayan yapılardır. 
 Classlar projeyi, classlar sınıf içerisinde yazılan kod bloklarını bölümlendirir.
 
 ### Avantajları
 
-Methodlar devamlı aynı kod bloklarını tekrar etmememizi engeller ve programlarımıza esneklik kazandırır.
-Böylece kod karmaşasından kurtulurken aynı anda programımızın daha stabil ve hızlı çalışmasını sağlar.
+Methodlar devamlı aynı kod bloklarını tekrar etmemizi engeller ve programlarımıza esneklik kazandırır.
+Böylece kod karmaşasından kurtulurken aynı anda programımızın daha **stabil ve hızlı** çalışmasını sağlar.
 Ariyetten projemizde hata çıktığında hatayı bulup düzeltmemizi kolaylaştırır.
 
 ## Method Oluşturma
@@ -26,7 +26,7 @@ Hemen kısaca bu gereken şeylerin ne olduğunun tanımını yapayım.
 Public seviyesindeki methoda class içerisinden veya dışarısından fark etmeksizin erişme ve veri almak mümkündür
 
 #### Private
-Public seviyesinin tam tersine class dışındaki hiçbir şey bu methoda ulaşamaz.
+Public seviyesinin tam tersine class dışındaki **hiçbir şey** bu methoda ulaşamaz.
 
 #### Protected
 Public ile Private seviyelerinin arasındadır, clas içerisinde protected olarak işaretlenen eleman sadece o class içinden veya o classtan kalıtım alan sınıflar
@@ -39,8 +39,8 @@ Void kullanıldığı zaman return kullanılamaz ve eğer giriş parametresi yok
 
 ### Niteliyiciler
 
-Opsiyonel bir seçenektir yani kullanmak zorunda değilsiniz. İleri seviye programlama olan OOP'de static, abstract, virtual, sealed kelimelerinden birini temsil eder.
-Method içerisinde genelde static kullanılır.
+Opsiyonel bir seçenektir yani kullanmak zorunda değilsiniz. İleri seviye programlama olan OOP'de **static, abstract, virtual, sealed** kelimelerinden birini temsil eder.
+Method içerisinde genelde **static** kullanılır.
 
 ### Dönecek Veri Tipleri
 
@@ -53,7 +53,7 @@ Bazı methodlar dışarıdan değişken almak zorundadır, bu değişkenlere par
 
 #### Params
 
-Methodlarda değişken tanımlandığında sadece bir adet parametre alabilirsiniz fakat parantezin içerisine params ifadesini yazarsanız tanımladığınız değişken
+Methodlarda değişken tanımlandığında sadece bir adet parametre alabilirsiniz fakat parantezin içerisine **params** ifadesini yazarsanız tanımladığınız değişken
 dizi değişkeni olarak tanımlanır böylecene birden fazla parametre alabilirsiniz.
 
 ```C#
@@ -62,7 +62,7 @@ public int YasHesaplama(params int[] x) { }
 
 #### Overload
 
-Aynı methodun birden fazla versiyonu varsa bu method Overload olur. Mesela yaş hesaplama methodunu hem string ile hem int ile ayrı ayrı olarak yaparsak bu method
+Aynı methodun birden fazla versiyonu varsa bu method **Overload** olur. Mesela yaş hesaplama methodunu hem string ile hem int ile ayrı ayrı olarak yaparsak bu method
 Overload olacaktır.
 
 ```C#
@@ -89,10 +89,10 @@ public int Toplama  (int sayi1, int sayi2)
         }
 ```
 
-Toplama adında bir method yaptım,  sayi1 ve sayi2 olarak  2 tane int parametre alacak.
+Toplama adında bir method yaptım,  **sayi1** ve **sayi2** olarak  2 tane **int parametre** alacak.
 Sonra sonuc adında bir değişken oluşturdum bu değişken  sayi1 ve sayi2 'nin toplamını return Sonuc; kodu sayesinde verecek
 Şimdi Program.cs'e geldim ve
-Static Void Main arasına
+> Static Void Main arasına
 
 ```C#
  Console.WriteLine("1. Sayıyı Giriniz");
@@ -108,14 +108,14 @@ Static Void Main arasına
 ```
 yazdım.
 
-Konsola girilen her değer string olarak alınır, bizim alacağımız değişkenler integer olduğu için bunu string'ten integer'a dönüştürmemiz lazım.
+Konsola girilen her değer **string** olarak alınır, bizim alacağımız değişkenler **integer** olduğu için bunu string'ten integer'a dönüştürmemiz lazım.
 Parse sayesinde string'ten integer'a değiştirdik. Sonra classımızı türettik böylecene sanal isim ile Toplama methodunu kullanabileceğiz.
 En sonda toplama işlemini yazdırmak için console.writeline arasına sanalisim.Toplama(sayi1,sayi2) yazdım böylecene gönderdiğimiz değişkenler alınacak
 ve işlem yapılıp döndürülecek.
 
 ### Parametresiz Method 
 
-Bunu direk Program.cs'e yazdım.
+Bunu direk **Program.cs**'e yazdım.
 
 ```C#
     public static void Merhaba() {
